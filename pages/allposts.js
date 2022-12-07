@@ -37,11 +37,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-     <div>
+     <div className='allpost-container'>
       <h1>See what other prople are saying</h1>
       {allPosts.map(post=><Posts {...post} key={post.id} >
         <Link href={{pathname:`/${post.id}`,query:{...post}}}>
-          <button>{post.comments?.lenght}comments</button>
+          <button className='comments-btn'>{post.comments?.lenght}comments</button>
         </Link>
         </Posts>)}
      </div>

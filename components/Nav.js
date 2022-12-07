@@ -17,6 +17,9 @@ function Nav() {
       <Link href='/'>
      <button className='main-logo'>We Collab</button>
       </Link>
+      <Link href='/support'>
+        <button>Support</button>
+      </Link>
      <ul>
       {!user &&
       <Link href='/auth/login'>
@@ -27,10 +30,10 @@ function Nav() {
       {user && (
         <div >
          <Link href='/post'>
-         <button>Post</button> 
+         <button className='post-btn'>Post</button> 
        </Link> 
        <Link href='/dashboard'>
-        <img src={user.photoURL} alt="User display picture" className='w-10 rounded-full cursor-pointer' />
+        <img src={user.photoURL} alt="User display picture" className='avatar-img' />
        </Link>
        </div> 
       )    

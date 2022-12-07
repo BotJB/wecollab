@@ -1,6 +1,6 @@
 
 import Nav from './Nav'
-
+import footer from './footer'
 export default function Layout({children}){
 return(
 <div>
@@ -8,6 +8,7 @@ return(
 <main>
     {children}
 </main>
+<footer/>
 </div>
 
     )

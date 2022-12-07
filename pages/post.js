@@ -39,7 +39,7 @@ await addDoc(collectionref,{
  name:user.displayName
 })
 setPost({description:''})
-router.push('/')
+router.push('/allposts')
 }
 }
 
@@ -60,7 +60,7 @@ checkUser()
 },[user,loading])
 
   return (
-    <div>
+    <div className='enter-post'>
         <form onSubmit={submitPost}>
             <h1>{post.hasOwnProperty('id')?'Edit your Post':'Create a new Post'}</h1>
             <div>

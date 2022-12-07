@@ -48,16 +48,18 @@ await deleteDoc(docRef)
 
 
   return (
-    <div>
+    <div className='dashboard-container'>
         <h1>Your Posts</h1>
         <div>
             {posts.map(post=>{
                return(
-                <div>
+                <div className='single-post-container'>
                 <Posts {...post} key={post.id} />
-                <button onClick={()=>deletePost(post.id)}><BsTrash2Fill />Delete</button>
+                <div className="buttons-container">
+                <button onClick={()=>deletePost(post.id)} className='btn-del'><BsTrash2Fill />Delete</button>
                 <Link href={{pathname:'/post',query:post}}>
-                <button><AiFillEdit />Edit</button></Link>
+                <button className='btn-edit'><AiFillEdit />Edit</button></Link>
+                </div>
                 </div>
                 
                )
