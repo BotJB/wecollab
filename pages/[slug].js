@@ -9,6 +9,7 @@ import { arrayUnion, doc, getDoc, onSnapshot, Timestamp, updateDoc } from 'fireb
 
 
 function Detial() {
+    
 
 const router=useRouter()
 const routeData=router.query;
@@ -48,24 +49,25 @@ const getComments=async()=>{
 useEffect(()=>{
 if(!router.isReady) return
 getComments()
+
 },[router.isReady])
   return (
     <div><Posts {...routeData}></Posts> 
     <div>
-        <div>
+        <div className='comment-section'>
             <input type="text" 
             onChange={(e=>setMessage(e.target.value))}
             value={message}
             placeholder="Enter your comment to start the conversation"
             />
-            <button onClick={submitComment}>Submit</button>
+            <button onClick={submitComment} className='comment-submit'>Submit</button>
         </div>
-        <div>
-            <h2>Comments</h2>
+        <div className='other-comments'>
+            <h2>Look at what other poeple are saying</h2>
          {allMessages?.map(post=>(
-          <div>
-            <div>
-                <img src={post.img} alt='user image' />
+          <div className='single-comment'>
+            <div className='comment-info'>
+                <img src={post.avatar} alt='user image' />
                 <h2>{post.userName}</h2>
             </div>
             <div>

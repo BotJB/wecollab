@@ -2,8 +2,8 @@ import React,{useEffect} from 'react'
 
 function posts({children,description,avatar,name}) {
  console.log(description)
- const badWords=/fuck|asshole|fucking|retrard/gi;
- let finalDesc=description.replace(badWords,'######')
+ const badWords=/fuck|asshole|fucking|retrard|nigger/gi;
+ let finalDesc=description?.replace(badWords,'######')
  let newWord=description+'This is extra here'
   return (
     <div className='post-container'>

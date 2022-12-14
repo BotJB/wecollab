@@ -20,6 +20,9 @@ function Nav() {
       <Link href='/support'>
         <button>Support</button>
       </Link>
+      <Link href='/about'>
+        <button>About</button>
+      </Link>
      <ul>
       {!user &&
       <Link href='/auth/login'>
