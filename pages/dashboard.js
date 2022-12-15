@@ -9,7 +9,7 @@ import {AiFillEdit} from 'react-icons/ai'
 import { async } from '@firebase/util';
 import Link from 'next/link';
 
-function dashboard() {
+function Dashboard() {
     const router=useRouter();
     const [user,loading]=useAuthState(auth)
     const [posts,setPosts]=useState([])
@@ -70,4 +70,4 @@ await deleteDoc(docRef)
   )
 }
 
-export default dashboard
+export default Dashboard

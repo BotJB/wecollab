@@ -6,7 +6,7 @@ import { async } from '@firebase/util'
 import { addDoc, collection, doc, serverTimestamp, updateDoc } from 'firebase/firestore'
 
 
-function posts() {
+function Posts() {
   //To save what is typed in the text area
   const [post,setPost]=useState({description:''})
    
@@ -75,4 +75,4 @@ checkUser()
   )
 }
 
-export default posts
+export default Posts

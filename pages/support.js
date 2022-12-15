@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {PayPalButton} from 'react-paypal-button-v2'
-function support() {
+function Support() {
     const [scriptLoadeed,setScriptLoaded]=useState(false)
     const [donateAmount,setDonateAmount]=useState(0)
 
@@ -56,4 +56,4 @@ useEffect(()=>{
   )
 }
 
-export default support
+export default Support
